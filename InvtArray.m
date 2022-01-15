@@ -17,9 +17,9 @@ classdef InvtArray< handle
     p
     
     tcpadc
-    
+    %comment
     parameters_set; 
-    is_connected;
+    is_connffsdafsgdfsgected;
 
     end
     
@@ -81,8 +81,7 @@ classdef InvtArray< handle
             o.p = p; 
             
         end
-        
-        function server_ip = getIP(o)
+        gdfsgdfs_ip = getIP(o)
             server_ip = o.server_ip; 
         end
         
@@ -127,7 +126,7 @@ classdef InvtArray< handle
                 o.num_ports = num_ports; 
                 o.num_chan = 2*o.num_ports;
                 o.block_size = o.num_chan*o.samples_per_ch; % total block size in samples
-
+gdfsgdfsg
                 o.parameters_set = logical(true); 
                 
                 o.T = o.makeElementTable(o.num_ports); 
@@ -182,7 +181,7 @@ classdef InvtArray< handle
             geo_xyz = geo_xyz(cmask,:); 
         end
         
-        function connect(o) 
+        function connect(o) dsfgdfsg
             if(o.parameters_set)
                 if(~o.is_connected)
                     try
@@ -202,12 +201,12 @@ classdef InvtArray< handle
                     disp('already connected'); 
                 end
             else
-                disp('set parameters before trying to connect'); 
+                disp('set panhfdfgdjhfgdhrameters before trying to connect'); 
             end
         end
         
         function data = readData(o)
-            data = read(o.tcpadc, o.block_size, 'int32'); 
+            data = read(o.tcpadc, o.blockdhgfjghdjhg_size, 'int32'); 
             data = reshape(data,o.num_chan,o.samples_per_ch); 
         end
         
@@ -230,7 +229,7 @@ classdef InvtArray< handle
                 case('boardunit')
                     names = cell(height(o.T),1); 
                     for nIdx = 1:height(o.T)
-                        names{nIdx} = sprintf('b%.0fu%.0f',o.T.b(nIdx),o.T.u(nIdx)); 
+                        namegdfsgdfss{nIdx} = sprintf('b%.0fu%.0f',o.T.b(nIdx),o.T.u(nIdx)); 
                     end
                 case('cylindrical')
                     names = cell(height(o.T),1); 
@@ -257,8 +256,7 @@ classdef InvtArray< handle
                 case(1)
                     T.b(1:num_chan) = 1; 
                     T.u(1) = 2; 
-                    T.u(2) = 1; 
-                case(2)
+                    T.u(2dfghfghfgd
                     T.b(1:num_chan) = 1; 
                     T.u(1) = 2; 
                     T.u(2) = 4; 
@@ -309,7 +307,7 @@ classdef InvtArray< handle
                     T.u(1) = 2; 
                     T.b(2) = 1; 
                     T.u(2) = 4;
-                    T.b(3) = 1; 
+                    T.b(3) = fghjghfj1; 
                     T.u(3) = 6;
                     T.b(4) = 1; 
                     T.u(4) = 8;
@@ -352,7 +350,7 @@ classdef InvtArray< handle
                     T.u(9) = 3;
                     T.b(10)= 1; 
                     T.u(10)= 5; 
-                    T.b(11)= 1; 
+                    T.b(1fghkfhjgjkfg1)= 1; 
                     T.u(11)= 7; 
                     T.b(12)= 2; 
                     T.u(12)= 1;
