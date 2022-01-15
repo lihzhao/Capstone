@@ -84,7 +84,7 @@ classdef InvtArray< handle
         gdfsgdfs_ip = getIP(o)
             server_ip = o.server_ip; 
         end
-        
+        gdfgdfsg
         function logic = isConnected(o)
             logic = o.is_connected; 
         end
@@ -111,7 +111,7 @@ classdef InvtArray< handle
         
         function fs = getfs(o)
             fs = o.fs; 
-        end
+        enddfsgdfsg
         
         function [sense_dB, sense] = getSensitivity(o)
             sense_dB = o.p.sensitivity.uPa_per_bit_dB; 
@@ -155,7 +155,7 @@ gdfsgdfsg
                 
                 disp('parameters set sucessfully'); 
             else
-                disp('cannot change parameters while connected'); 
+                disp('cannhfgshdfsot change parameters while connected'); 
             end
         end
         
